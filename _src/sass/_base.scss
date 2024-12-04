@@ -1,0 +1,55 @@
+body {
+     margin: 0;
+     background-color: #444;
+     color: #f7f7f7;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.hero {
+     height: 50vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-size: cover;
+     background-position: 50% 50%;
+     background-repeat: no-repeat;
+     h1 {
+          font-size: 6rem;
+
+     }
+}
+.wrapper {
+     padding: 4vw 20vw 6vw;
+}
+.small-img {
+     width: 20vw;
+}
+.sailing {
+     background-color: rgb(23, 159, 159);
+     .hero {
+          background-image: url('../img/sailing-bg.jpg');
+     }
+}
+
+.skiing {
+     background-color: white;
+     color: #222222;
+     .hero {
+          background-image: url('../img/skiing-bg.jpg');
+     }
+}
+.card {
+     width: 33%;
+     background-color: #bbbbbb;
+     color: black;
+     .card-img {
+          img {
+               width: 100%;
+          }
+     }
+     .card-text {
+          padding: 2vw;
+          h3 {
+               margin-top: 0;
+          }
+     }
+}
