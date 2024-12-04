@@ -1,0 +1,17 @@
+@use "sass:color";
+
+$font__main: 'Sorts Mill Goudy', serif;
+$font__heading: 'Montserrat', sans-serif;
+
+$color__silver: #abacac;
+$color__white: #FFFFFF;
+$color__gray: #777777;
+$color__night: #000000;
+$color__fire-brick: #BC0922;
+$color__dark-brick: #770c00;
+$color__nav-darkblue: #1e1e85;
+$color__nav-lightblue: #4141d0;
+$unit__headerHeightMin: 80px;
+$unit__headerHeightMax: 120px;
+$unit__headerHeight: clamp($unit__headerHeightMin, 7vw, $unit__headerHeightMax);
+$unit__headerDropdownHeight: clamp(35px, calc(2.5vw + 20px) ,75px);

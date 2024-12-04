@@ -1,0 +1,36 @@
+@use "variables" as *;
+
+body {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.passionOne{
+    font-family: "Passion One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.3vw;
+}
+
+h1, .scrollButton{
+    @extend .passionOne;
+    margin: 0px;
+    padding: 0px;
+}
+
+h2{
+    @extend .passionOne;
+    margin: 0px;
+    padding: 0px;
+    font-size: 2.5vw;
+     min-width: auto;
+}
+
+h3{
+    font-family: "Yatra One", system-ui;
+    font-weight: 800;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+    font-size: 40px;
+}

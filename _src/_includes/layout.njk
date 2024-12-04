@@ -4,18 +4,22 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>{{ title }} - Dan's Hobbies</title>
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+
+
      <link rel="stylesheet" href="../css/style.css">   
+     <script defer src="../js/script.js"></script>
 </head>
 <body class=" {{ pageClass }}">
-     <header>
-          {% include 'nav.html' %}
-     </header>
-     <div class="hero">
-          <h1>{{ title }}</h1>
-     </div>
-     <div class="wrapper">
-          {{ content | safe }}
-     </div>
-     <script src="../js/script.js"></script>
+     {% include 'header.html' %}
+      <main>
+        <div class="hero">
+            <h3>SASS is pretty cool I guess</h3>
+        </div>
+      </main>
 </body>
 </html>

@@ -1,0 +1,45 @@
+@use "variables" as *;
+
+@media screen and (max-width: 768px) {
+     .navCollapse {
+          display: flex;
+     }
+     .navCollapse:hover + .navMain, .navMain:hover{
+          display: flex;
+     }
+     .navMain {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: $color__night;
+     }
+     .navMain * {
+          font-size: 4vw;
+     }
+     .navStart {
+          width: 40vw;
+          transition: all 200ms linear;
+     }
+     .navEnd {
+          width: 35vw;
+          transition: all 200ms linear;
+     }
+     .navStart h1 {
+          font-size: 5vw;
+     }
+     .navEnd h1 {
+          font-size: 5vw;
+     }
+
+     .sideBar {
+          display: none;
+     }
+
+     .contentBubble {
+          width: 90vw;
+          margin-left: 5vw;
+          margin-right: 5vw;
+     }
+}

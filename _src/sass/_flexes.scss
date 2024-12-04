@@ -1,0 +1,19 @@
+._row {
+     display: flex;
+     flex-direction: row;
+}
+._col {
+     display: flex;
+     flex-direction: column;
+}
+._jBetween{
+     justify-content: space-between;    
+}
+._aCenter{
+     align-items: center;
+}
+._jCenter{
+     justify-content: center;
+}
+
+
