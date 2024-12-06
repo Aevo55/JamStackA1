@@ -1,8 +1,32 @@
 ---
-layout: layout.njk
-title: Dan's Hobbies
+layout: home.njk
+title: Daws A1
 pageClass: home
 ---
+<div class="hero">
+  <div class="heroText">
+
+### Rain World Wiki?
+#### IM 318 Assignment 1
+
+  </div>
+</div>
+<div class="contentRow">
+  <div class="contentBubble">
+
+##### What is Rain World?
+Rain world is a platformer game in which the player must survive and explore the remnants of a
+long-dead advanced civilization. The player takes control of one of many Slugcats, each with their
+own unique capabilities and goals. Slugcats are very low on the food chain, making it difficult to
+survive against the various flora and fauna present in the world.
+  </div>
+  <div class="contentBubble contentBubbleCenter">
+  
+  ![Rain World Logo image](./img/rainWorld.webp)
+  </div>
+</div>
+
+
 This is a paragraph.
 
 ## This is a subtitle

@@ -1,1 +1,417 @@
-*,::before,::after{box-sizing:border-box}html{line-height:normal}body{margin:0}hr{border-style:solid;border-width:1px 0 0;color:inherit;height:0;overflow:visible}img,svg,video,canvas,audio,iframe,embed,object{display:block;max-width:100%}img,svg,video,canvas{height:auto}audio{width:100%}img{border-style:none}svg{overflow:hidden}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}body{text-decoration:none;font-size:20px}.passionOne,h2,h1,.scrollButton{font-family:"Passion One",sans-serif;font-weight:400;font-style:normal;letter-spacing:.3vw}h1,.scrollButton{margin:0px;padding:0px}h2{margin:0px;padding:0px;font-size:2.5vw;min-width:auto}h3{font-family:"Yatra One",system-ui;font-weight:800;font-style:normal;margin:0px;padding:0px;font-size:40px}._row,.navMain,.navMain li{display:flex;flex-direction:row}._col,.navCenter,a .navCenter>*,body,.hero{display:flex;flex-direction:column}._jBetween{justify-content:space-between}._aCenter,.navCenter,a .navCenter>*,body,.hero{align-items:center}._jCenter,.navCenter,a .navCenter>*,.navMain li,.hero{justify-content:center}body{margin:0px;padding:0px;background-color:#777}ul{height:100%;margin:0px;padding:0px}main{top:clamp(80px,7vw,120px);width:100%;height:3000px;position:absolute}.hero{width:100%;background-color:#777;height:200px;opacity:.9;border-bottom:#0e0e0e;border-bottom-width:4px;border-bottom-style:solid}header{z-index:10;position:fixed;width:100%;background-color:#abacac;margin:0px;padding:0px}nav{width:100%;height:clamp(80px,7vw,120px);padding:0px;background-color:#000}.navStart{width:30vw;height:100%;background-color:#1e1e85;clip-path:polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);color:#fff;transition:color 200ms linear,background-color 200ms linear}.navStart h1{padding-right:3.5vw;font-size:4vw}.navStart:hover{background-color:#fff;color:#4141d0}.navCenter,a .navCenter>*,a .navCenter>*>*{text-decoration:none;height:100%;pointer-events:auto;padding:0 2vw;white-space:nowrap}.navCollapse{color:#fff;display:none;font-size:10vw;cursor:pointer;width:25vw;height:100%}.navMain{opacity:1;width:45vw;list-style:none}.navMain li{width:auto;flex:1 auto;position:relative}.navMain *{color:#fff;transition:color 200ms linear}.navMain h2:hover{color:#4141d0}.navMain>li:not(:first-child)::before{position:absolute;display:block;content:"";width:1px;top:15%;left:0%;height:70%;background-color:#777}.navParent{margin:0px;padding:0px;position:relative;pointer-events:none}.navParent:hover>a h2{color:#4141d0}.navParent:hover .navChildren{opacity:1;left:0%;top:100%;height:auto}.navChildren{position:absolute;opacity:0;top:0%;left:0%;transition:all 100ms linear;background:#000;z-index:-1;list-style:none}.navChildren li{height:clamp(35px,2.5vw + 20px,75px)}.navEnd{width:25vw;height:100%;background-color:#fff;clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);color:#1e1e85;transition:color 200ms linear,background-color 200ms linear}.navEnd:hover{background-color:#1e1e85;color:#fff}.navEnd h1{padding-left:3vw;font-size:4vw}@media screen and (max-width: 768px){.navCollapse{display:flex}.navCollapse:hover+.navMain,.navMain:hover{display:flex}.navMain{display:none;position:absolute;top:100%;left:0;width:100%;background-color:#000}.navMain *{font-size:4vw}.navStart{width:40vw;transition:all 200ms linear}.navEnd{width:35vw;transition:all 200ms linear}.navStart h1{font-size:5vw}.navEnd h1{font-size:5vw}.sideBar{display:none}.contentBubble{width:90vw;margin-left:5vw;margin-right:5vw}}/*# sourceMappingURL=style.css.map */
+/* Global Remedies
+******************/
+/* Use border-box by default, globally */
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/*
+* Consistent line spacing...
+* CSS Inline Layout Module Level 3: https://drafts.csswg.org/css-inline-3/#line-sizing-property
+*/
+html {
+  line-height: normal;
+}
+
+/* Remove the tiny space around the edge of the page */
+body {
+  margin: 0;
+}
+
+/*
+* 1. Solid, thin horizontal rules
+* 2. Remove Firefox `color: gray`
+* 3. Remove default `1px` height, and common `overflow: hidden`
+*/
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+
+/* Embedded Elements
+********************/
+/*
+* 1. Block display is usually what we want
+* 2. Remove strange space-below when inline
+* 3. Responsive by default
+*/
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+* Maintain intrinsic aspect ratios when `max-width` is applied
+* (iframe, embed, and object have no intrinsic ratio, set height explicitly)
+*/
+img, svg, video, canvas {
+  height: auto;
+}
+
+/*
+* There is no good reason elements default to 300px,
+* and audio files are unlikely to come with a width attribute
+*/
+audio {
+  width: 100%;
+}
+
+/* Old Browsers
+***************/
+/* Remove the border on images inside links in IE 10 and earlier */
+img {
+  border-style: none;
+}
+
+/* Hide the overflow in IE 10 and earlier */
+svg {
+  overflow: hidden;
+}
+
+/* Default block display on HTML5 elements */
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+/*
+* 1. Add the correct box sizing in IE 10
+* 2. Remove the padding in IE 10
+*/
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.passionOne, h2, h1, .scrollButton {
+  font-family: "Passion One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.3vw;
+}
+
+h1, .scrollButton {
+  margin: 0px;
+  padding: 0px;
+}
+
+h2 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 2.5vw;
+  min-width: auto;
+}
+
+h3 {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: normal;
+  font-size: 60pt;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: normal;
+  font-size: 32pt;
+  margin: 0;
+}
+
+h5 {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: normal;
+  font-size: 20pt;
+  margin: 0;
+}
+
+p {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: normal;
+  font-size: 12pt;
+  max-width: 40vw;
+  margin: 0px;
+  text-align: justify;
+}
+
+._row, .navMain, .navMain li {
+  display: flex;
+  flex-direction: row;
+}
+
+._col, .navCenter, a .navCenter > *, body {
+  display: flex;
+  flex-direction: column;
+}
+
+._jBetween {
+  justify-content: space-between;
+}
+
+._aCenter, .navCenter, a .navCenter > *, body {
+  align-items: center;
+}
+
+._jCenter, .navCenter, a .navCenter > *, .navMain li {
+  justify-content: center;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #777777;
+}
+
+ul {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+main {
+  top: clamp(80px, 7vw, 120px);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  color: white;
+  background-color: #323232;
+  word-wrap: normal;
+  width: 100vw;
+}
+
+.heroText {
+  margin: 100px 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(75, 75, 75, 0.4);
+  border-radius: 10px;
+  text-align: center;
+  width: fit-content;
+}
+
+.hero {
+  background: url(/img/rainWorldBackground.png);
+  width: 100%;
+  height: 400px;
+  padding: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.contentBubble {
+  margin: 20px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #4b4b4b;
+  border-radius: 10px;
+  max-width: 60vw;
+  height: fit-content;
+  border-width: 2pt;
+  border-color: black;
+  border-style: solid;
+}
+
+.contentRow:nth-of-type(odd) {
+  flex-direction: row-reverse;
+}
+
+.contentBubbleCenter {
+  align-items: center;
+}
+
+img {
+  max-width: 20vw;
+  height: max-content;
+  margin: -10px -15px;
+  object-fit: cover;
+}
+
+header {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  background-color: #abacac;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  width: 100%;
+  height: clamp(80px, 7vw, 120px);
+  padding: 0px;
+  background-color: #000000;
+}
+
+.navStart {
+  width: 30vw;
+  height: 100%;
+  background-color: #1e1e85;
+  clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
+  color: #FFFFFF;
+  transition: color 200ms linear, background-color 200ms linear;
+}
+.navStart h1 {
+  padding-right: 3.5vw;
+  font-size: 4vw;
+}
+
+.navStart:hover {
+  background-color: #FFFFFF;
+  color: #4141d0;
+}
+
+.navCenter, a .navCenter > *, a .navCenter > * > * {
+  text-decoration: none;
+  height: 100%;
+  pointer-events: auto;
+  padding: 0 2vw;
+  white-space: nowrap;
+}
+
+.navCollapse {
+  color: #FFFFFF;
+  display: none;
+  font-size: 10vw;
+  cursor: pointer;
+  width: 25vw;
+  height: 100%;
+}
+
+.navMain {
+  opacity: 1;
+  width: 45vw;
+  list-style: none;
+}
+.navMain li {
+  width: auto;
+  flex: 1 auto;
+  position: relative;
+}
+.navMain * {
+  color: #FFFFFF;
+  transition: color 200ms linear;
+}
+.navMain h2:hover {
+  color: #4141d0;
+}
+.navMain > li:not(:first-child)::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1px;
+  top: 15%;
+  left: 0%;
+  height: 70%;
+  background-color: #777777;
+}
+
+.navParent {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  pointer-events: none;
+}
+.navParent:hover > a h2 {
+  color: #4141d0;
+}
+.navParent:hover .navChildren {
+  opacity: 1;
+  left: 0%;
+  top: 100%;
+  height: auto;
+}
+
+.navChildren {
+  position: absolute;
+  opacity: 0;
+  top: 0%;
+  left: 0%;
+  transition: all 100ms linear;
+  background: #000000;
+  z-index: -1;
+  list-style: none;
+}
+.navChildren li {
+  height: clamp(35px, 2.5vw + 20px, 75px);
+}
+
+.navEnd {
+  width: 25vw;
+  height: 100%;
+  background-color: #FFFFFF;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
+  color: #1e1e85;
+  transition: color 200ms linear, background-color 200ms linear;
+}
+.navEnd:hover {
+  background-color: #1e1e85;
+  color: #FFFFFF;
+}
+.navEnd h1 {
+  padding-left: 3vw;
+  font-size: 4vw;
+}
+
+@media screen and (max-width: 768px) {
+  .navCollapse {
+    display: flex;
+  }
+  .navCollapse:hover + .navMain, .navMain:hover {
+    display: flex;
+  }
+  .navMain {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+  }
+  .navMain * {
+    font-size: 4vw;
+  }
+  .navStart {
+    width: 40vw;
+    transition: all 200ms linear;
+  }
+  .navEnd {
+    width: 35vw;
+    transition: all 200ms linear;
+  }
+  .navStart h1 {
+    font-size: 5vw;
+  }
+  .navEnd h1 {
+    font-size: 5vw;
+  }
+  .contentRow {
+    flex-direction: column;
+  }
+  .contentRow:nth-of-type(odd) {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

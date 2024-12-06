@@ -1,0 +1,148 @@
+@use "variables" as *;
+@use "flexes" as *;
+
+header {
+     z-index: 10;
+     position: fixed;
+     width: 100%;
+     background-color: $color__silver;
+     margin: 0px;
+     padding: 0px;
+}
+
+nav {
+     width: 100%;
+     height: $unit__headerHeight;
+     padding: 0px;
+     background-color: $color__night;
+}
+
+.navStart {
+     width: 30vw;
+     height: 100%;
+     background-color: $color__dark-brick;
+     clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
+     color: $color__white;
+     transition: color 200ms linear, background-color 200ms linear;
+     h1 {
+          padding-right: 3.5vw;
+          font-size: 4vw;
+     }
+}
+
+.navStart:hover {
+     background-color: $color__white;
+     color: $color__nav-lightblue;
+}
+
+.navCenter {
+     @extend ._col, ._jCenter, ._aCenter;
+     text-decoration: none;
+     height: 100%;
+     pointer-events: auto;
+     padding: 0 2vw;
+     white-space: nowrap;
+}
+
+a{
+     .navCenter > *{
+          @extend .navCenter;
+     }
+}
+
+.navCollapse {
+     color: $color__white;
+     display: none;
+     font-size: 10vw;
+     cursor: pointer;
+     width: 25vw;
+     height: 100%;
+}
+
+.navMain{
+     @extend ._row;
+     opacity: 1;
+     width: 45vw;
+     list-style: none;
+
+     li {
+          @extend ._row, ._jCenter;
+          width: auto;
+          flex: 1 auto;
+          position: relative;
+     }
+     * {
+          color: $color__white;
+          transition: color 200ms linear;
+     }
+     h2 {
+          &:hover{
+               color: $color__nav-lightblue;
+          }
+     }
+     > li:not(:first-child)::before {
+          position: absolute;
+          display: block;
+          content: "";
+          width: 1px;
+          top: 15%;
+          left: 0%;
+          height: 70%;
+          background-color: $color__gray;
+     }
+}
+
+
+.navParent{
+     margin: 0px;
+     padding: 0px;
+     position: relative;
+     pointer-events: none;
+     &:hover {
+          > a {
+               h2 {
+                    color: $color__nav-lightblue;
+               }
+          }
+          .navChildren {
+               opacity: 1;
+               left: 0%;
+               top: 100%;
+               height: auto;
+          }
+     }
+}
+
+.navChildren {
+     position: absolute;
+     opacity: 0;
+     top: 0%;
+     left: 0%;
+     transition: all 100ms linear;
+     background: $color__night;
+     z-index: -1;
+     list-style: none;
+
+     li {
+          height: $unit__headerDropdownHeight;
+     }
+}
+
+.navEnd {
+     width: 25vw;
+     height: 100%;
+     background-color: $color__white;
+     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
+     color: $color__nav-darkblue;
+     transition: color 200ms linear, background-color 200ms linear;
+
+     &:hover{
+          background-color: $color__nav-darkblue;
+          color: $color__white;
+     }
+
+     h1 {
+          padding-left: 3vw;
+          font-size: 4vw;
+     }
+}

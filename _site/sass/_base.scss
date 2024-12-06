@@ -1,0 +1,33 @@
+@use "variables" as *;
+@use "flexes" as *;
+
+body {
+  margin: 0px;
+  padding: 0px;
+  @extend ._col, ._aCenter;
+  background-color: $color__gray;
+}
+
+ul {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+main{
+  top: $unit__headerHeight;
+  width: 100%;
+  height: 3000px;
+  position: absolute;
+}
+
+.hero {
+  @extend ._col, ._jCenter, ._aCenter;
+  width: 100%;
+  background-color: $color__gray;
+  height: 200px;
+  opacity: .9;
+  border-bottom: #0E0E0E;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+}

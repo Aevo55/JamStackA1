@@ -33,11 +33,13 @@
           font-size: 5vw;
      }
 
-     .contentRow{
-          flex-direction: column;
-      }
+     .sideBar {
+          display: none;
+     }
 
-      .contentRow:nth-of-type(odd){
-          flex-direction: column;
-      }
+     .contentBubble {
+          width: 90vw;
+          margin-left: 5vw;
+          margin-right: 5vw;
+     }
 }
