@@ -15,17 +15,16 @@ ul {
 }
 
 main{
-  top: $unit__headerHeight;
-  position: fixed;
+  margin: 0px;
+  margin-top: $unit__headerHeight;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 0px;
   color: white;
   background-color: #323232;
   word-wrap: normal;  
   width: 100vw; 
+  height: auto;
 }
 
 .heroText{
@@ -56,11 +55,11 @@ main{
 .contentRow{
   display: flex;
   flex-direction: row;
-
+  align-items: center;
 }
 
 .contentBubble{
-  margin: 20px;
+  margin: 10px;
   padding: 20px 30px;
   display: flex;
   flex-direction: column;
